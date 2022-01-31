@@ -1,0 +1,107 @@
+:root {
+    --standartGap: 30px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background: radial-gradient(ellipse at top left, #1b1612, transparent),
+                radial-gradient(ellipse at bottom right, #db5c01, transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list {
+    max-width: 400px;
+    min-width: 350px;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--standartGap);
+    padding: var(--standartGap) 0;
+    border-radius: 10px;
+
+}
+.list__header {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px black;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.user {
+    border: 1px solid grey;
+    background: rgba(255,255,255,0.15);
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: stretch;
+    gap: 1em;
+    border-radius: 15px;
+    padding: 0.7em 0;
+    transition: all 0.1s ease;
+    cursor: pointer;
+    user-select: none;
+}
+.user__img {
+    width: 30%;
+    min-width: 7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.img {
+    width: 5em;
+    height: 5em;
+    object-fit: cover;
+    border-radius: 15%;
+    box-shadow: 2px 2px 4px gray;
+}
+.user__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.details__header {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px black;
+    transition: all 0.1s ease;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.details__text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    font-weight: lighter;
+    line-height: 2em;
+    text-shadow: 1px 1px 2px black;
+    transition: all 0.1s ease;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.user:hover,
+.user:focus,
+.user:active {
+    transform: scale(1.1);
+    background: rgba(255,255,255,0.8);
+    color: black;
+    text-shadow: none;
+    outline: none;
+}
+.details__header-none,
+.details__text-none {
+    text-shadow: none;
+}
